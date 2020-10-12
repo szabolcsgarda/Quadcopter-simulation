@@ -1,0 +1,76 @@
+[System]
+Name='RollFuzzy2'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=30
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Angle'
+Range=[-90 90]
+NumMFs=5
+MF1='LN':'trapmf',[-130 -90 -45 -30]
+MF2='SN':'trapmf',[-60.61 -35 -10 -1.5]
+MF3='normal':'trimf',[-15 0 15]
+MF4='SP':'trapmf',[1.5 10 35 60.47]
+MF5='LP':'trapmf',[30 45 105 121]
+
+[Input2]
+Name='Rate_of_Angle_change'
+Range=[-90 90]
+NumMFs=5
+MF1='LN':'trapmf',[-130 -90 -8 -6.5]
+MF2='SN':'trapmf',[-6.5 -5 -3 -1.5]
+MF3='normal':'trimf',[-5 0 5]
+MF4='SP':'trapmf',[1.5 3 5 6.5]
+MF5='LP':'trapmf',[6.5 8 105 121]
+
+[Output1]
+Name='Output'
+Range=[-0.05 0.05]
+NumMFs=7
+MF1='LN':'trapmf',[-0.065 -0.0517 -0.04 -0.03]
+MF2='MN':'trapmf',[-0.04024 -0.03332 -0.02 -0.01369]
+MF3='SN':'trapmf',[-0.021 -0.015 -0.0085 -0.0055]
+MF4='normal':'trapmf',[-0.01 -0.005 0.005 0.01]
+MF5='SP':'trapmf',[0.0055 0.0085 0.015 0.021]
+MF6='MP':'trapmf',[0.01388 0.02 0.03438 0.04106]
+MF7='LP':'trapmf',[0.03 0.04 0.0515 0.0648]
+
+[Rules]
+1 1, 3 (1) : 1
+1 2, 2 (1) : 1
+1 3, 2 (1) : 1
+1 4, 5 (1) : 1
+1 5, 5 (1) : 1
+1 0, 1 (1) : 1
+5 1, 3 (1) : 1
+5 2, 3 (1) : 1
+5 3, 6 (1) : 1
+5 4, 6 (1) : 1
+5 5, 5 (1) : 1
+5 0, 7 (1) : 1
+2 1, 2 (1) : 1
+2 2, 1 (1) : 1
+2 3, 3 (1) : 1
+2 4, 6 (1) : 1
+2 5, 7 (1) : 1
+2 0, 3 (1) : 1
+3 1, 3 (1) : 1
+3 2, 3 (1) : 1
+3 3, 4 (1) : 1
+3 4, 5 (1) : 1
+3 5, 5 (1) : 1
+3 0, 4 (1) : 1
+4 1, 1 (1) : 1
+4 2, 2 (1) : 1
+4 3, 5 (1) : 1
+4 4, 7 (1) : 1
+4 5, 6 (1) : 1
+4 0, 5 (1) : 1
