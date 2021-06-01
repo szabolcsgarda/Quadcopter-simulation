@@ -47,21 +47,21 @@ plot(ax1,out.roll_integrated.time, out.roll_integrated.signals.values,time,ref_r
 xlim([0 15])
 xlabel('time [s]')
 ylabel('Roll angle [Degree]')
-legend('Simple integration','Reference','FontSize',4)
+legend('Simple integration','Reference','FontSize',8)
 
 ax2 = nexttile;
 plot(ax2,out.pitch_integrated.time, out.pitch_integrated.signals.values,time, ref_pitch(:,2))
 xlim([0 15])
 xlabel('time [s]')
 ylabel('Pitch angle [Degree]')
-legend('Simple integration','Reference','FontSize',4)
+legend('Simple integration','Reference','FontSize',8)
 
 ax3 = nexttile
 plot(ax3,out.yaw_integrated.time, out.yaw_integrated.signals.values, time, ref_yaw(:,2))
 xlim([0 15])
 xlabel('time [s]')
 ylabel('Yaw angle [Degree]')
-legend('Simple integration','Reference','FontSize',4)
+legend('Simple integration','Reference','FontSize',8)
 saveas(gcf,'simple_integration.pdf')
 
 
@@ -74,21 +74,21 @@ plot(ax1,out.roll_estimated.time, out.roll_estimated.signals.values,time,ref_rol
 xlim([0 15])
 xlabel('time [s]')
 ylabel('Roll angle [Degree]')
-legend('Estimated','Reference','FontSize',4)
+legend('Estimated','Reference','FontSize',8)
 
 ax2 = nexttile;
 plot(ax2,out.pitch_estimated.time, out.pitch_estimated.signals.values,time, ref_pitch(:,2))
 xlim([0 15])
 xlabel('time [s]')
 ylabel('Pitch angle [Degree]')
-legend('Estimated','Reference','FontSize',4)
+legend('Estimated','Reference','FontSize',8)
 
 ax3 = nexttile
 plot(ax3,out.yaw_estimated.time, out.yaw_estimated.signals.values, time, ref_yaw(:,2))
 xlim([0 15])
 xlabel('time [s]')
 ylabel('Yaw angle [Degree]')
-legend('Estimated','Reference','FontSize',4)
+legend('Estimated','Reference','FontSize',8)
 saveas(gcf,'complementary_estimation.pdf')
 
 %Plot accelerometer-based roll and pitch estimations
@@ -99,7 +99,7 @@ plot(ax1,out.roll_accelerometer.time, out.roll_accelerometer.signals.values,time
 xlim([0 15])
 xlabel('time [s]')
 ylabel('Roll angle [Degree]')
-legend('Estimated','Reference','FontSize',4)
+legend('Estimated','Reference','FontSize',8)
 
 
 ax2 = nexttile;
@@ -107,7 +107,7 @@ plot(ax2,out.pitch_accelerometer.time, out.pitch_accelerometer.signals.values,ti
 xlim([0 15])
 xlabel('time [s]')
 ylabel('Pitch angle [Degree]')
-legend('Estimated','Reference','FontSize',4)
+legend('Estimated','Reference','FontSize',8)
 
 saveas(gcf,'acc_estimations.pdf')
 
@@ -120,5 +120,5 @@ plot(ax3,out.yaw_magnetometer.time, out.yaw_magnetometer.signals.values, time, r
 xlim([0 15])
 xlabel('time [s]')
 ylabel('Yaw angle [Degree]')
-legend('Estimated','Reference','FontSize',4)
+legend('Estimated','Reference','FontSize',8)
 saveas(gcf,'mag_estimations.pdf')

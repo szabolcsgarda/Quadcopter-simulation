@@ -28,6 +28,8 @@ Jprop = 0.2;
 maxRPM = 10000;
 maxLiftForce = maxRPM^2 * cl;
 
+filt_coeff = 45;
+
 %% Sensor properties
 gyro_update_rate = 0.01; 
 
